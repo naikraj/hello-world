@@ -1,0 +1,84 @@
+What is git? 
+-version control, managing changes, roll back.
+
+github - host online. 
+commands:
+clone
+add
+commit
+push
+pull
+
+readme.md mark down - way to format easiliy
+basic file to have always
+
+git --version
+
+use gitbash for windows
+
+
+//pull request
+git clone <> 
+use ssh link
+
+ls -la --> to inlcude hidden as well
+git status
+--shows what is modified n not saved
+
+git add . 
+--track all files now
+git add index.html 
+--specify one
+
+git status
+
+git commit -m "saving index.html" -m "this is description"
+--this saves locally
+--now make it live on github
+
+git push
+connecting your local to remote
+
+ssh-keygen -t rsa -b 4096 -C "rajrnaik9@gmail.com"
+--now generating public/private rsa key pair.
+enter file to save the key (users/raj/.ssh/id_rsa):testkey
+
+ls | grep testkey
+testkey
+testkey.pub
+
+cat testkey.pub
+copy and add under settings>ssh>new 
+https://github.com/rajsgarage/hello-world
+
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+--use this to configure in ssh agent
+
+# start the ssh-agent in the background
+$ eval `ssh-agent -s`
+> Agent pid 59566
+
+$ ssh-add ~/.ssh/id_ed25519
+
+first commit to local, then push to remote
+
+
+LOCAL REPO pushed to REMOTE
+create folder, create some file.
+$ git init
+$ git status
+$ git add .
+$ git status
+$ git commit -m ""
+$ git push origin master
+but origin not defined, git doesnt know where to push
+create empty repo on github and then link it here
+$ git remote add origin https://github.com/rajsgarage/local-repo.git
+
+$ git remote -v
+origin  https://github.com/rajsgarage/local-repo.git (fetch)
+origin  https://github.com/rajsgarage/local-repo.git (push)
+--shows if any remote directories currently connected to
+
+$ git push -u origin master
+instead of using "origin master" everytime you set upstream
