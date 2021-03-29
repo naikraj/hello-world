@@ -21,7 +21,7 @@ use gitbash for windows
 git clone <> 
 use ssh link
 
-ls -la --> to inlcude hidden as well
+ls -la --> to include hidden as well
 git status
 --shows what is modified n not saved
 
